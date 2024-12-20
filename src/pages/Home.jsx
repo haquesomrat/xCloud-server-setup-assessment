@@ -1,8 +1,15 @@
+import Container from "../components/Container";
+import Footer from "../components/Footer";
+import ServerSetupContainer from "../components/server-setup/ServerSetupContainer";
+
 const Home = () => {
   return (
-    <div>
-      <h1>Homepage</h1>
-    </div>
+    <Container>
+      <div className="pt-20 pb-[58px]">
+        <ServerSetupContainer />
+        <Footer />
+      </div>
+    </Container>
   );
 };
 

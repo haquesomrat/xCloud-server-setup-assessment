@@ -3,9 +3,9 @@ import Navbar from "../components/Navbar";
 
 const Root = () => {
   return (
-    <div>
+    <div className="bg-[#171A30]">
       <Navbar />
-      <div className="container mx-auto">
+      <div>
         <Outlet />
       </div>
     </div>

@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-  font-family: "Inter", serif;
-  font-size: 16px;
+  font-family: "DM Sans", serif;
+  font-size: 15px;
   line-height: normal;
+}
+
+.egg {
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }
