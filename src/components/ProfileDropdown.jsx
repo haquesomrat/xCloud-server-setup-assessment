@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import profileAvatar from "/profile-avatar.png";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { dropdownItems } from "../fake-data/dropdownItems";
+import useClickOutside from "../hooks/useClickOutside";
 
 const ProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,18 +12,7 @@ const ProfileDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  useClickOutside(dropdownRef, () => setIsOpen(false));
 
   return (
     <div ref={dropdownRef}>
@@ -49,6 +39,7 @@ const ProfileDropdown = () => {
           </svg>
         </div>
       </button>
+
       {/* dropdown content */}
       <div
         className={`${

@@ -1,13 +1,14 @@
 import xCloudLogo from "/xCloudLogo.png";
 import ProfileDropdown from "./ProfileDropdown";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="bg-[#1D2239]">
       <div className="max-w-[2075px] mx-auto flex justify-between items-center p-4 md:py-[25px] xl:px-[50px]">
-        <div>
+        <Link to="/">
           <img src={xCloudLogo} alt="Logo" />
-        </div>
+        </Link>
         <div className="text-white inline-flex items-center gap-4 relative">
           <div>
             {/* notification icon */}
