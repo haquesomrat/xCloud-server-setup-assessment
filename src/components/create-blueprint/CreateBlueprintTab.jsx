@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Plugins from "./Plugins";
+
 const tabsData = [
   {
     id: "1",
@@ -8,7 +10,7 @@ const tabsData = [
   {
     id: "2",
     label: "Plugins",
-    content: "Content for Tab 2 (plugins)",
+    content: <Plugins />,
   },
   {
     id: "3",
@@ -18,7 +20,7 @@ const tabsData = [
 ];
 
 const CreateBlueprintTab = () => {
-  const [activeTab, setActiveTab] = useState(tabsData[0].id);
+  const [activeTab, setActiveTab] = useState(tabsData[1].id);
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
@@ -26,13 +28,13 @@ const CreateBlueprintTab = () => {
   return (
     <div className="pt-4">
       {/* tabllist */}
-      <div className="bg-[#171A30] flex flex-col md:flex-row items-center justify-between">
-        <div className="flex items-center gap-2 overflow-x-auto">
+      <div className="bg-[#171A30] flex flex-col sm:flex-row items-center justify-between">
+        <div className="flex items-center overflow-x-auto">
           {tabsData.map((tab) => (
             <button
               type="button"
               key={tab.id}
-              className={`text-white p-5 border-b-[2px] whitespace-nowrap ${
+              className={`text-white p-3 sm:p-5 border-b-[2px] whitespace-nowrap ${
                 activeTab === tab.id ? "border-white" : "border-transparent"
               }`}
               onClick={() => handleTabClick(tab.id)}
@@ -42,7 +44,7 @@ const CreateBlueprintTab = () => {
           ))}
         </div>
 
-        <div className="mr-[7px] relative py-5 md:py-0">
+        <div className="mr-[7px] relative py-5 sm:py-0">
           <input
             className="bg-[#1D2239] rounded-lg py-2.5 pl-4 pr-10 w-full lg:w-[311px] text-[#74778E] focus-visible:outline-0"
             type="text"

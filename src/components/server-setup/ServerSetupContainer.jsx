@@ -17,6 +17,8 @@ const ServerSetupContainer = () => {
           Fill in the details below to get your server set up with xCloud
         </p>
       </div>
+
+      {/* server setup form */}
       <ServerSetupForm />
     </div>
   );

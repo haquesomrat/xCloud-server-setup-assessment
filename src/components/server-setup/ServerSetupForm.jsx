@@ -24,6 +24,7 @@ const ServerSetupForm = () => {
 
   return (
     <form className="pt-12 space-y-8">
+      {/* server details */}
       <div>
         <h4 className="text-lg font-medium text-white leading-tight pb-4">
           Server Details
@@ -85,6 +86,7 @@ const ServerSetupForm = () => {
         </div>
       </div>
 
+      {/* server types */}
       <div>
         <h4 className="text-lg font-medium text-white leading-tight pb-4">
           Server Type
@@ -160,6 +162,7 @@ const ServerSetupForm = () => {
         </div>
       </div>
 
+      {/* blueprints selection */}
       <div className="p-5 bg-[#171A30] rounded-[5px]">
         <div className={`${isBlueprintsChecked && "pb-3"}`}>
           <div className="flex justify-between gap-4">
