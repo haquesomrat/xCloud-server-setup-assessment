@@ -3,12 +3,14 @@ import SelectedPlugins from "./SelectedPlugins";
 
 const Plugins = () => {
   return (
-    <div className="pb-20">
+    <div className="pb-0">
       {/* selected plugins */}
       <SelectedPlugins />
 
       {/* all plugins */}
-      <AllPlugins />
+      <div className="">
+        <AllPlugins />
+      </div>
     </div>
   );
 };

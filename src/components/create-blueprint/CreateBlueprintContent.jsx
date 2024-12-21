@@ -6,7 +6,7 @@ const CreateBlueprintContent = ({ modalRef, handleShowModal }) => {
     <div className="bg-[#171A30CC] fixed inset-0 flex items-center justify-center z-50">
       <div
         ref={modalRef}
-        className="w-full max-w-[1050px] px-4 xl:px-0 relative"
+        className="w-full max-w-[1050px] px-4 xl:px-0 relative overflow-auto"
       >
         <div className=" bg-[#1D2239] p-4 md:p-8 rounded-lg">
           {/* Modal title and exit button  */}
