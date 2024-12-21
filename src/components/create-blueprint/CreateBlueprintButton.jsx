@@ -5,6 +5,7 @@ const CreateBlueprintButton = ({ handleShowModal }) => {
       onClick={handleShowModal}
       className="flex items-center p-3 gap-1 bg-[#147AFF] rounded text-white text-sm m-2"
     >
+      {/* plus icon */}
       <svg
         width="18"
         height="18"

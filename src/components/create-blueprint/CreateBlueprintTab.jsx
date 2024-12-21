@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Plugins from "./Plugins";
+import Plugins from "./plugins/Plugins";
 
 const tabsData = [
   {
@@ -15,7 +15,7 @@ const tabsData = [
   {
     id: "3",
     label: "Popular Plugins",
-    content: "Content for Tab 3 (popular plugins)",
+    content: <Plugins />,
   },
 ];
 
