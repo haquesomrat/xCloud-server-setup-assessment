@@ -23,7 +23,7 @@ const BlueprintOptions = ({
           />
 
           {/* blueprint option content */}
-          <label className="" htmlFor={singleBlueprint.name}>
+          <label htmlFor={singleBlueprint.name}>
             {/* blueprint select icon */}
             {blueprint === singleBlueprint.name ? (
               <svg
@@ -57,7 +57,7 @@ const BlueprintOptions = ({
                 </defs>
               </svg>
             ) : (
-              <span className="h-4 w-4 flex items-center justify-center border border-[#313A6C] absolute top-2 right-2 z-20 rounded-full m-1"></span>
+              <span className="h-4 w-4 flex items-center justify-center border border-[#313A6C] absolute top-2 right-2 z-20 rounded-full m-[2px]"></span>
             )}
 
             {/* blueprint option texts */}
