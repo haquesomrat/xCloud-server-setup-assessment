@@ -1,30 +1,24 @@
 import { useState } from "react";
-// import { allBlueprints } from "../../fake-data/allBlueprints.js";
-// import { Link } from "react-router-dom";
-// import CreateBlueprintModal from "../create-blueprint/CreateBlueprintModal.jsx";
 import ServerTypes from "./ServerTypes.jsx";
 import ServerDetails from "./ServerDetails.jsx";
 import BlueprintSelection from "./BlueprintSelection.jsx";
+import { useForm } from "../Context/FormProvider.jsx";
 
 const ServerSetupForm = () => {
-  const [formData, setFormdata] = useState({
-    serverName: "",
-    tag: "",
-    serverType: "Go Live",
-    blueprint: "Blueprint Name One",
-  });
+  const { formData, setFormData } = useForm();
   const [isBlueprintsChecked, setIsBlueprintsChecked] = useState(false);
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
 
   const handleCheckboxChange = () => {
     setIsBlueprintsChecked(!isBlueprintsChecked);
   };
 
-  const handleChange = (event) => {
-    setFormdata({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  };
   console.log(formData);
 
   return (

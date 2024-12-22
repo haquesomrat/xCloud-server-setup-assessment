@@ -3,8 +3,18 @@ import Container from "../components/Container";
 import CreateBlueprintModal from "../components/create-blueprint/CreateBlueprintModal";
 import BlueprintOptions from "../components/server-setup/BlueprintOptions";
 import { allBlueprints } from "../fake-data/allBlueprints";
+import { useForm } from "../components/Context/FormProvider";
 
 const Blueprints = () => {
+  const { formData, setFormData } = useForm();
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   return (
     <Container>
       <div className="pt-20 pb-[58px] min-h-[calc(100vh-100px)]">
@@ -17,7 +27,11 @@ const Blueprints = () => {
           </div>
 
           {/* blueprint options */}
-          <BlueprintOptions allBlueprints={allBlueprints} />
+          <BlueprintOptions
+            blueprint={formData.blueprint}
+            allBlueprints={allBlueprints}
+            handleChange={handleChange}
+          />
 
           <div className="pt-12 flex items-center justify-end">
             <Link to={"/"}>

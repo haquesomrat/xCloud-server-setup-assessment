@@ -19,3 +19,9 @@ input:-webkit-autofill:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: #919db9;
 }
+
+@layer components {
+  .xc-middle {
+    @apply flex items-center justify-center;
+  }
+}

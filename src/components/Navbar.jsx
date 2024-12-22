@@ -32,7 +32,7 @@ const Navbar = () => {
               </defs>
             </svg>
             {/* active status */}
-            <div className="h-[3.35px] w-[7px] bg-[#2DC774] egg absolute -top-2 left-5"></div>
+            <div className="h-[7px] w-[7px] bg-[#2DC774] rounded-full absolute top-2.5 left-5"></div>
           </div>
           <ProfileDropdown />
         </div>

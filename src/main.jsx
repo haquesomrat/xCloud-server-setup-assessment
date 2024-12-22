@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Blueprints from "./pages/Blueprints";
 import Root from "./layout/Root";
+import { FormProvider } from "./components/Context/FormProvider";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <FormProvider>
+      <RouterProvider router={router} />
+    </FormProvider>
   </StrictMode>
 );
