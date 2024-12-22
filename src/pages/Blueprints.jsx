@@ -22,7 +22,9 @@ const Blueprints = () => {
           <div className="pt-12 flex items-center justify-end">
             <Link to={"/"}>
               <button className="flex items-center p-3 gap-1 group bg-[#2DC774] px-6 py-3 rounded-lg">
-                <span className="text-base text-white">Ok</span>
+                <span className="text-base text-white font-semibold leading-tight">
+                  Ok
+                </span>
               </button>
             </Link>
           </div>

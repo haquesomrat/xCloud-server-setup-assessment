@@ -5,7 +5,7 @@ import ServerSetupContainer from "../components/server-setup/ServerSetupContaine
 const Home = () => {
   return (
     <Container>
-      <div className="pt-20 pb-[58px]">
+      <div className="pt-20 pb-5 md:pb-[58px] min-h-screen">
         <ServerSetupContainer />
         <Footer />
       </div>

@@ -3,8 +3,12 @@ import pluginImg from "/icons/plugin-icon.png";
 const Plugin = ({ plugin }) => {
   const { selected } = plugin;
   return (
-    <div className="bg-[#171A30] rounded-lg relative divide-y-[1px] divide-[#1D2239] cursor-pointer">
-      <div className="flex justify-between gap-4 p-4 pr-11 pb-6">
+    <div
+      className={`bg-[#171A30] rounded-lg relative divide-y-[1px] divide-[#1D2239] cursor-pointer border ${
+        selected ? "border-[#147AFF]" : "border-transparent"
+      }`}
+    >
+      <div className="flex justify-between gap-4 p-4 pb-6">
         <div>
           <div className=" h-12 w-12 rounded-lg bg-[#1D2239] flex items-center justify-center">
             <img src={pluginImg} alt="plugin image" />

@@ -1,6 +1,6 @@
 export const allBlueprints = [
   {
-    name: "Blue Print One",
+    name: "Blueprint Name One",
     default: true,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },
@@ -18,7 +18,7 @@ export const allBlueprints = [
     ],
   },
   {
-    name: "Blue Print 2",
+    name: "Blueprint Name 2",
     default: false,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },
@@ -36,7 +36,7 @@ export const allBlueprints = [
     ],
   },
   {
-    name: "Blue Print 3",
+    name: "Blueprint Name 3",
     default: false,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },
@@ -54,7 +54,7 @@ export const allBlueprints = [
     ],
   },
   {
-    name: "Blue Print 4",
+    name: "Blueprint Name 4",
     default: false,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },
@@ -72,7 +72,7 @@ export const allBlueprints = [
     ],
   },
   {
-    name: "Blue Print 5",
+    name: "Blueprint Name 5",
     default: false,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },
@@ -90,7 +90,7 @@ export const allBlueprints = [
     ],
   },
   {
-    name: "Blue Print 6",
+    name: "Blueprint Name 6",
     default: false,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },
@@ -108,7 +108,7 @@ export const allBlueprints = [
     ],
   },
   {
-    name: "Blue Print 7",
+    name: "Blueprint Name 7",
     default: false,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },
@@ -126,7 +126,7 @@ export const allBlueprints = [
     ],
   },
   {
-    name: "Blue Print 8",
+    name: "Blueprint Name 8",
     default: false,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },
@@ -144,7 +144,7 @@ export const allBlueprints = [
     ],
   },
   {
-    name: "Blue Print 9",
+    name: "Blueprint Name 9",
     default: false,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },
@@ -162,7 +162,7 @@ export const allBlueprints = [
     ],
   },
   {
-    name: "Blue Print 10",
+    name: "Blueprint Name 10",
     default: false,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },
@@ -180,7 +180,7 @@ export const allBlueprints = [
     ],
   },
   {
-    name: "Blue Print 11",
+    name: "Blueprint Name 11",
     default: false,
     tags: [
       { title: "Alpha", id: "1", textColor: "#6C90B4", bgColor: "#CCE6FF" },

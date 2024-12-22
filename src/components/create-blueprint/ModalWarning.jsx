@@ -40,7 +40,7 @@ const ModalWarning = ({ setIsWarningOpen }) => {
           </defs>
         </svg>
 
-        <span className="text-white md:text-[#A1A7BA] text-sm leading-none mr-auto">
+        <span className="text-[#A1A7BA] text-sm leading-none mr-auto">
           Warning: You must create a name for your Blueprint
         </span>
 

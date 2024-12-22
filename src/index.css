@@ -11,3 +11,11 @@ body {
 .egg {
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #919db9;
+}

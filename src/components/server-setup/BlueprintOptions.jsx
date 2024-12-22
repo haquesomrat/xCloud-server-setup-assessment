@@ -1,12 +1,11 @@
 import { useLocation } from "react-router-dom";
 
 const BlueprintOptions = ({
-  blueprint = "Blue Print One",
+  blueprint = "Blueprint Name One",
   handleChange,
   allBlueprints,
 }) => {
   const path = useLocation().pathname;
-  console.log(blueprint);
 
   return (
     <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4`}>
@@ -64,41 +63,44 @@ const BlueprintOptions = ({
             <div
               className={`${
                 path === "/blueprints" ? "bg-[#171A30]" : "bg-[#1D2239]"
-              } p-4 rounded-md border z-10 cursor-pointer ${
+              } flex items-start gap-[5px] p-[15px] rounded-md border z-10 cursor-pointer ${
                 blueprint === singleBlueprint.name
                   ? "border-[#147AFF]"
                   : "border-transparent"
               }`}
             >
-              <div className="pb-3">
-                <div className="inline-flex mr-[5px]">
-                  <p className="text-white text-sm">{singleBlueprint.name}</p>
+              <div>
+                <div className="flex mr-[5px]">
+                  <p className="text-white text-sm leading-none pb-3">
+                    {singleBlueprint.name}
+                  </p>
                 </div>
-                {singleBlueprint.default && (
-                  <span className="text-xs text-white leading-normal px-1 rounded bg-[#313A6C]">
-                    default
-                  </span>
-                )}
+                {/* blueprint tags */}
+                <div className="flex items-center gap-.5">
+                  {singleBlueprint.tags.slice(0, 3).map((blueprintTag) => (
+                    <div
+                      key={blueprintTag.id}
+                      style={{
+                        color: blueprintTag.textColor,
+                        backgroundColor: blueprintTag.bgColor,
+                      }}
+                      className={` text-sm py-[7px] px-[5px] border border-[#373E60] rounded h-6 w-6 inline-flex items-center justify-center`}
+                    >
+                      {blueprintTag.title.charAt(0)}
+                    </div>
+                  ))}
+                  <div className="text-[#171A30] text-sm bg-[#80B7FF] py-[7px] px-[5px] border border-[#373E60] rounded h-6 w-6 inline-flex items-center justify-center">
+                    4+
+                  </div>
+                </div>
               </div>
 
-              {/* blueprint tags */}
-              <div className="flex items-center gap-.5">
-                {singleBlueprint.tags.slice(0, 3).map((blueprintTag) => (
-                  <div
-                    key={blueprintTag.id}
-                    style={{
-                      color: blueprintTag.textColor,
-                      backgroundColor: blueprintTag.bgColor,
-                    }}
-                    className={` text-sm py-[7px] px-[5px] border border-[#373E60] rounded h-6 w-6 inline-flex items-center justify-center`}
-                  >
-                    {blueprintTag.title.charAt(0)}
-                  </div>
-                ))}
-                <div className="text-[#171A30] text-sm bg-[#80B7FF] py-[7px] px-[5px] border border-[#373E60] rounded h-6 w-6 inline-flex items-center justify-center">
-                  4+
-                </div>
-              </div>
+              {/* default badge */}
+              {singleBlueprint.default && (
+                <span className="text-xs text-white leading-normal px-1 rounded bg-[#313A6C]">
+                  default
+                </span>
+              )}
             </div>
           </label>
         </div>

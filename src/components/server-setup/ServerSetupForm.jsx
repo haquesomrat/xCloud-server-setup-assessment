@@ -11,7 +11,7 @@ const ServerSetupForm = () => {
     serverName: "",
     tag: "",
     serverType: "Go Live",
-    blueprint: "Blue Print One",
+    blueprint: "Blueprint Name One",
   });
   const [isBlueprintsChecked, setIsBlueprintsChecked] = useState(false);
 
