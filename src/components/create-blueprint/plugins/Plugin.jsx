@@ -1,16 +1,17 @@
 import pluginImg from "/icons/plugin-icon.png";
 
-const Plugin = ({ plugin }) => {
-  const { selected } = plugin;
+const Plugin = ({ plugin, handlePluginSelection }) => {
+  const { selected, id } = plugin;
   return (
     <div
+      onClick={() => handlePluginSelection(id)}
       className={`bg-[#171A30] rounded-lg relative divide-y-[1px] divide-[#1D2239] cursor-pointer border ${
         selected ? "border-[#147AFF]" : "border-transparent"
       }`}
     >
       <div className="flex justify-between gap-4 p-4 pb-6">
         <div>
-          <div className=" h-12 w-12 rounded-lg bg-[#1D2239] flex items-center justify-center">
+          <div className=" h-12 w-12 rounded-lg bg-[#1D2239] xc-middle">
             <img src={pluginImg} alt="plugin image" />
           </div>
         </div>
@@ -61,7 +62,7 @@ const Plugin = ({ plugin }) => {
               </defs>
             </svg>
           ) : (
-            <span className="h-4 w-4 flex items-center justify-center border border-[#313A6C] absolute top-2 right-2 z-20 rounded-full m-1"></span>
+            <span className="h-4 w-4 xc-middle border border-[#313A6C] absolute top-2 right-2 z-20 rounded-full m-1"></span>
           )}
         </div>
       </div>

@@ -34,8 +34,10 @@ const CreateBlueprintTab = () => {
             <button
               type="button"
               key={tab.id}
-              className={`text-white p-3 sm:p-5 border-b-[2px] whitespace-nowrap ${
-                activeTab === tab.id ? "border-white" : "border-transparent"
+              className={`p-3 sm:p-5 border-b-[2px] whitespace-nowrap ${
+                activeTab === tab.id
+                  ? "border-white text-white"
+                  : "border-transparent text-[#A1A7BA]"
               }`}
               onClick={() => handleTabClick(tab.id)}
             >
