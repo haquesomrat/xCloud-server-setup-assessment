@@ -4,11 +4,30 @@ import CreateBlueprintContent from "./CreateBlueprintContent";
 import useClickOutside from "../../hooks/useClickOutside";
 
 const CreateBlueprintModal = () => {
-  const [showModal, setShowModal] = useState(false);
   const modalRef = useRef(null);
+
+  const [showModal, setShowModal] = useState(false);
+  const [blueprintName, setBlueprintName] = useState("");
+  const [errorStatus, setErrorStatus] = useState("");
+  const [isWarningOpen, setIsWarningOpen] = useState(false);
+
+  const handleNameChange = (e) => {
+    setBlueprintName(e.target.value);
+  };
 
   const handleShowModal = () => {
     setShowModal(!showModal);
+  };
+
+  const handleBlueprintNameSubmit = () => {
+    if (blueprintName.length > 0) {
+      setErrorStatus("success");
+      setShowModal(false);
+    } else {
+      setErrorStatus("failed");
+      setShowModal(true);
+      setIsWarningOpen(true);
+    }
   };
 
   useClickOutside(modalRef, () => setShowModal(false));
@@ -23,6 +42,12 @@ const CreateBlueprintModal = () => {
         <CreateBlueprintContent
           modalRef={modalRef}
           handleShowModal={handleShowModal}
+          blueprintName={blueprintName}
+          handleBlueprintNameSubmit={handleBlueprintNameSubmit}
+          handleNameChange={handleNameChange}
+          errorStatus={errorStatus}
+          isWarningOpen={isWarningOpen}
+          setIsWarningOpen={setIsWarningOpen}
         />
       )}
     </div>
