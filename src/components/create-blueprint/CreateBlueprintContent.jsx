@@ -14,7 +14,7 @@ const CreateBlueprintContent = ({
   setIsWarningOpen,
 }) => {
   return (
-    <div className="bg-[#171A30CC] fixed inset-0 flex flex-col items-center justify-center z-40">
+    <div className="bg-[#171A30CC] fixed inset-0 flex flex-col items-center justify-center z-40 overflow-hidden">
       <div className="overflow-auto space-y-3.5 py-8 lg:py-4 w-full">
         <div
           ref={modalRef}
