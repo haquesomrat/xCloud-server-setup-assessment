@@ -21,9 +21,9 @@ const BlueprintOptions = ({
             onChange={handleChange}
           />
 
-          {/* blueprint option content */}
+          {/* start::Blueprint Option Content */}
           <label htmlFor={singleBlueprint.name}>
-            {/* blueprint select icon */}
+            {/* start:: Blueprint Select/Deselect Icon */}
             {blueprint === singleBlueprint.name ? (
               <svg
                 className="absolute top-2 right-2"
@@ -56,16 +56,18 @@ const BlueprintOptions = ({
                 </defs>
               </svg>
             ) : (
-              <span className="h-4 w-4 flex items-center justify-center border border-[#313A6C] absolute top-2 right-2 z-20 rounded-full m-[2px]"></span>
+              <span className="xc-blueprint-deselect"></span>
             )}
 
-            {/* blueprint option texts */}
+            {/* end:: Blueprint Select/Deselect Icon */}
+
+            {/* start:: Blueprint Option Content */}
             <div
-              className={`${
-                path === "/blueprints" ? "bg-[#171A30]" : "bg-[#1D2239]"
-              } flex items-start gap-[5px] p-[15px] rounded-md border z-10 cursor-pointer ${
+              className={`xc-blueprint-card ${
+                path === "/blueprints" ? "bg-xc-background" : "bg-xc-foreground"
+              } ${
                 blueprint === singleBlueprint.name
-                  ? "border-[#147AFF]"
+                  ? "border-xc-blue"
                   : "border-transparent"
               }`}
             >
@@ -75,7 +77,7 @@ const BlueprintOptions = ({
                     {singleBlueprint.name}
                   </p>
                 </div>
-                {/* blueprint tags */}
+                {/* start::Blueprint Tags */}
                 <div className="flex items-center gap-.5">
                   {singleBlueprint.tags.slice(0, 3).map((blueprintTag) => (
                     <div
@@ -89,20 +91,21 @@ const BlueprintOptions = ({
                       {blueprintTag.title.charAt(0)}
                     </div>
                   ))}
-                  <div className="text-[#171A30] text-sm bg-[#80B7FF] py-[7px] px-[5px] border border-[#373E60] rounded h-6 w-6 inline-flex items-center justify-center">
+                  <div className="text-xc-background text-sm bg-[#80B7FF] py-[7px] px-[5px] border border-[#373E60] rounded h-6 w-6 inline-flex items-center justify-center">
                     4+
                   </div>
                 </div>
               </div>
 
-              {/* default badge */}
+              {/* start::Default Badge */}
               {singleBlueprint.default && (
-                <span className="text-xs text-white leading-normal px-1 rounded bg-[#313A6C]">
-                  default
-                </span>
+                <span className="xc-badge">default</span>
               )}
+              {/* end::Default Badge */}
             </div>
+            {/* end:: Blueprint Option Content */}
           </label>
+          {/* end:: Blueprint Option */}
         </div>
       ))}
     </div>

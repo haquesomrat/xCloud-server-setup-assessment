@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { allPlugins } from "../../../fake-data/allPlugins";
-import Plugin from "./Plugin";
+import PluginCard from "./PluginCard";
 
 const AllPlugins = () => {
   const [plugins, setPlugins] = useState(allPlugins.slice(0, 12));
@@ -17,9 +17,9 @@ const AllPlugins = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[510px] overflow-auto scrollbar-hide mt-6 pb-[60px]">
+    <div className="xc-plugin-container">
       {plugins.map((plugin) => (
-        <Plugin
+        <PluginCard
           key={plugin.id}
           plugin={plugin}
           handlePluginSelection={handlePluginSelection}

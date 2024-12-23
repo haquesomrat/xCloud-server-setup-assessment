@@ -3,9 +3,11 @@ import { allServerTypes } from "../../fake-data/allServerTypes";
 const ServerTypes = ({ serverType, handleChange }) => {
   return (
     <div>
-      <h4 className="text-lg font-medium text-white leading-tight pb-4">
-        Server Type
-      </h4>
+      {/* start::Section Title */}
+      <h4 className="xc-section-title">Server Type</h4>
+      {/* end::Section Title */}
+
+      {/* start::Server Types Content */}
       <div className="grid gap-4 lg:gap-[30px] grid-cols-1 md:grid-cols-2">
         {allServerTypes.map((serverItem) => (
           <div key={serverItem.id}>
@@ -18,12 +20,12 @@ const ServerTypes = ({ serverType, handleChange }) => {
               checked={serverType === serverItem.type}
               onChange={handleChange}
             />
-            <label className="" htmlFor={serverItem.type}>
+            <label htmlFor={serverItem.type}>
               <div
-                className={`col-span-1 pt-4 pr-[19px] pb-6 pl-6 flex gap-5 h-full cursor-pointer items-center border rounded ${
+                className={`xc-server-item ${
                   serverType === serverItem.type
-                    ? "border-[#147AFF]"
-                    : "border-[#313A6C]"
+                    ? "border-xc-blue"
+                    : "border-xc-borderColor"
                 }`}
               >
                 <div className="w-12 h-12">
@@ -34,10 +36,10 @@ const ServerTypes = ({ serverType, handleChange }) => {
                   />
                 </div>
                 <div className="flex-1">
-                  <h6 className="text-white font-medium text-xl pb-2 leading-[18px]">
+                  <h6 className="text-white font-medium text-xl pb-2 leading-[18px] ">
                     {serverItem.type}
                   </h6>
-                  <p className="text-[#919DB9] leading-snug text-sm">
+                  <p className="text-xc-text leading-snug text-sm">
                     {serverItem.info}
                   </p>
                 </div>
@@ -46,6 +48,7 @@ const ServerTypes = ({ serverType, handleChange }) => {
           </div>
         ))}
       </div>
+      {/* end::Server Types Content */}
     </div>
   );
 };

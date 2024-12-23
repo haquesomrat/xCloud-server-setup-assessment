@@ -1,6 +1,7 @@
 const Footer = () => {
   return (
-    <div className="flex items-center justify-between text-[#919DB9] text-sm py-4 leading-tight gap-4 border-t border-[#1D2239] mt-[76px]">
+    <div className="xc-footer">
+      {/* start:: Copyright */}
       <div>
         <p>
           Copyright &#xA9; 2024 |{" "}
@@ -8,6 +9,9 @@ const Footer = () => {
           reserved.
         </p>
       </div>
+      {/* end:: Copyright */}
+
+      {/* start:: Changelog */}
       <div>
         <p className="text-right">
           xCloud{" "}
@@ -16,6 +20,7 @@ const Footer = () => {
           </a>
         </p>
       </div>
+      {/* end:: Changelog */}
     </div>
   );
 };

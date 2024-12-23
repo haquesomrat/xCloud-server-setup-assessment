@@ -1,7 +1,7 @@
 import BlueprintNameInput from "./BlueprintNameInput";
 import CreateBlueprintTab from "./CreateBlueprintTab";
+import ModalFooter from "./ModalFooter";
 import ModalWarning from "./ModalWarning";
-import TabFooter from "./TabFooter";
 
 const CreateBlueprintContent = ({
   modalRef,
@@ -14,27 +14,27 @@ const CreateBlueprintContent = ({
   setIsWarningOpen,
 }) => {
   return (
-    <div className="bg-[#171A30CC] fixed inset-0 flex flex-col items-center justify-center z-40 overflow-hidden">
+    <div className="xc-create-blueprint-content">
       <div className="overflow-auto space-y-3.5 py-8 lg:py-4 w-full">
         <div
           ref={modalRef}
-          className="flex flex-col gap-3.5 items-center justify-center max-w-[1050px] mx-auto"
+          className="xc-middle flex-col gap-3.5 max-w-lg mx-auto"
         >
-          {/* modal warning */}
+          {/* start:: Modal Warning */}
           {isWarningOpen && (
             <ModalWarning setIsWarningOpen={setIsWarningOpen} />
           )}
+          {/* end:: Modal Warning */}
 
-          {/* modal content */}
-          <div className="w-full max-w-[1050px] px-4 xl:px-0 relative overflow-auto">
-            <div className=" bg-[#1D2239] p-4 md:p-8 rounded-lg">
-              {/* Modal title and exit button  */}
-              <div className="flex justify-between items-center pb-4 md:pb-8">
-                <h1 className="text-white text-2xl md:text-3xl">
-                  Create Blueprint
-                </h1>
+          {/* start::Modal Content */}
+          <div className="xc-modal-content">
+            <div className=" bg-xc-foreground p-4 md:p-8 rounded-lg">
+              {/* start::Modal Title and Exit Button  */}
+              <div className="xc-between pb-4 md:pb-8">
+                <h1 className="xc-modal-title">Create Blueprint</h1>
+
                 <button
-                  className="h-6 w-6 inline-flex justify-center items-center border border-[#919DB9] rounded-lg"
+                  className="h-6 w-6 inline-flex justify-center items-center border border-xc-text rounded-lg"
                   onClick={handleShowModal}
                 >
                   <svg
@@ -53,8 +53,9 @@ const CreateBlueprintContent = ({
                   </svg>
                 </button>
               </div>
+              {/* end::Modal Title and Exit Button  */}
 
-              {/* blueprint name input */}
+              {/* start::Blueprint Name Input */}
               <div>
                 <BlueprintNameInput
                   blueprintName={blueprintName}
@@ -62,14 +63,19 @@ const CreateBlueprintContent = ({
                   errorStatus={errorStatus}
                 />
               </div>
+              {/* end::Blueprint Name Input */}
 
               {/* tab contents */}
               <CreateBlueprintTab />
             </div>
 
-            {/* tab footer */}
-            <TabFooter handleBlueprintNameSubmit={handleBlueprintNameSubmit} />
+            {/* Start:: Modal Footer */}
+            <ModalFooter
+              handleBlueprintNameSubmit={handleBlueprintNameSubmit}
+            />
+            {/* End:: Modal Footer */}
           </div>
+          {/* end::Modal Content */}
         </div>
       </div>
     </div>

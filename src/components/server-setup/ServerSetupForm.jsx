@@ -8,6 +8,7 @@ const ServerSetupForm = () => {
   const { formData, setFormData } = useForm();
   const [isBlueprintsChecked, setIsBlueprintsChecked] = useState(false);
 
+  // handle form change
   const handleChange = (event) => {
     setFormData({
       ...formData,
@@ -15,6 +16,7 @@ const ServerSetupForm = () => {
     });
   };
 
+  // handle checkbox
   const handleCheckboxChange = () => {
     setIsBlueprintsChecked(!isBlueprintsChecked);
   };
@@ -23,25 +25,29 @@ const ServerSetupForm = () => {
 
   return (
     <form className="pt-12 space-y-8">
+      {/* start:: Server Details */}
       <ServerDetails
         serverName={formData.serverName}
         tag={formData.tag}
         handleChange={handleChange}
       />
+      {/* end:: Server Details */}
 
-      {/* server types */}
+      {/* start:: Server Types */}
       <ServerTypes
         serverType={formData.serverType}
         handleChange={handleChange}
       />
+      {/* end:: Server Types */}
 
-      {/* blueprint selection */}
+      {/* start:: Blueprint Selection */}
       <BlueprintSelection
         isBlueprintsChecked={isBlueprintsChecked}
         handleCheckboxChange={handleCheckboxChange}
         blueprint={formData.blueprint}
         handleChange={handleChange}
       />
+      {/* end:: Blueprint Selection */}
     </form>
   );
 };

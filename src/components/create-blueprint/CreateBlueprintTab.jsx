@@ -1,11 +1,13 @@
 import { useState } from "react";
+import CreateBlueprintTabItems from "./CreateBlueprintTabItems";
 import Plugins from "./plugins/Plugins";
 
 const tabsData = [
   {
     id: "1",
     label: "Themes",
-    content: "Content for Tab 1 (themes)",
+    content:
+      "Content 1 is themes. But this is not a real content.It is just a placeholder.",
   },
   {
     id: "2",
@@ -22,33 +24,28 @@ const tabsData = [
 const CreateBlueprintTab = () => {
   const [activeTab, setActiveTab] = useState(tabsData[1].id);
 
+  // handle tab click
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
   };
+
   return (
     <div className="pt-4">
-      {/* tabllist */}
-      <div className="bg-[#171A30] flex flex-col sm:flex-row items-center justify-between">
-        <div className="flex items-center overflow-x-auto">
-          {tabsData.map((tab) => (
-            <button
-              type="button"
-              key={tab.id}
-              className={`p-3 sm:p-5 border-b-[2px] whitespace-nowrap ${
-                activeTab === tab.id
-                  ? "border-white text-white"
-                  : "border-transparent text-[#A1A7BA]"
-              }`}
-              onClick={() => handleTabClick(tab.id)}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
+      {/* start:: Tabs */}
+      <div className="bg-xc-background xc-between flex-col sm:flex-row">
+        {/* start:: Tabs Items*/}
+        <CreateBlueprintTabItems
+          tabsData={tabsData}
+          activeTab={activeTab}
+          handleTabClick={handleTabClick}
+        />
 
+        {/* end:: Tabs Items */}
+
+        {/* start:: Search */}
         <div className="mr-[7px] relative py-5 sm:py-0">
           <input
-            className="bg-[#1D2239] rounded-lg py-2.5 pl-4 pr-10 w-full lg:w-[311px] text-[#74778E] focus-visible:outline-0"
+            className="bg-xc-foreground rounded-lg py-2.5 pl-4 pr-10 w-full lg:w-[311px] text-xc-cardText focus-visible:outline-0"
             type="text"
             placeholder="Search"
           />
@@ -83,9 +80,11 @@ const CreateBlueprintTab = () => {
             </defs>
           </svg>
         </div>
+        {/* end:: Search */}
       </div>
+      {/* end:: Tabs */}
 
-      {/* tab contents */}
+      {/* start:: Tab Content */}
       <div className="mt-8">
         {tabsData.map((tab) => (
           <div
@@ -96,7 +95,7 @@ const CreateBlueprintTab = () => {
           </div>
         ))}
       </div>
-      <div></div>
+      {/* end:: Tab Content */}
     </div>
   );
 };

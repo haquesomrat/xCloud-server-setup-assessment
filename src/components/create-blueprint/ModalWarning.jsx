@@ -1,8 +1,8 @@
 const ModalWarning = ({ setIsWarningOpen }) => {
   return (
-    <div className="px-4 xl:px-0 w-full max-w-[1050px]">
-      <div className="px-4 md:px-6 py-3 flex justify-between items-center gap-2.5  bg-[#F8A6430A] border border-[#F8A64366] rounded ">
-        {/* warning icon */}
+    <div className="px-4 xl:px-0 w-full max-w-lg">
+      <div className="px-4 md:px-6 py-3 xc-between gap-2.5  bg-[#F8A6430A] border border-[#F8A64366] rounded ">
+        {/* start::Warning icon */}
         <svg
           width="18"
           height="18"
@@ -39,12 +39,16 @@ const ModalWarning = ({ setIsWarningOpen }) => {
             </clipPath>
           </defs>
         </svg>
+        {/* end::Warning icon */}
 
+        {/* start::Warning Text */}
         <span className="text-[#A1A7BA] text-sm leading-none mr-auto">
           Warning: You must create a name for your Blueprint
         </span>
+        {/* end::Warning Text */}
 
-        <div className="h-4 w-4 flex items-center justify-center cursor-pointer">
+        {/* start::Warning Close Icon */}
+        <div className="h-4 w-4 xc-middle cursor-pointer">
           <svg
             onClick={(prev) => setIsWarningOpen(!prev)}
             width="16"
@@ -74,6 +78,7 @@ const ModalWarning = ({ setIsWarningOpen }) => {
             </defs>
           </svg>
         </div>
+        {/* end::Warning Close Icon */}
       </div>
     </div>
   );

@@ -8,22 +8,27 @@ const ProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+  // handle dropdown
   const handleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
+  // handle click outside
   useClickOutside(dropdownRef, () => setIsOpen(false));
 
   return (
     <div ref={dropdownRef}>
-      {/* dropdown trigger */}
+      {/* start:Profile Dropdown Trigger */}
       <button
         onClick={handleDropdown}
-        className="flex items-center gap-2 md:gap-2.5 border border-[#171A30] rounded-[10px] p-1"
+        className="flex items-center gap-2 md:gap-2.5 border border-xc-background rounded-[10px] p-1"
       >
         <img src={profileAvatar} alt="avatar" />
+
         <p className="hidden md:inline font-medium tracking-tight">Mark Adam</p>
-        <div className="h-5 w-5 rounded flex items-center justify-center bg-[#171A30] ml-[3px] mr-2.5">
+
+        {/* start::Profile Dropdown Arrow */}
+        <div className="h-5 w-5 rounded xc-middle bg-xc-background ml-[3px] mr-2.5">
           <svg
             className={`${isOpen ? "rotate-180" : "rotate-0"} duration-300`}
             width="10"
@@ -38,16 +43,13 @@ const ProfileDropdown = () => {
             />
           </svg>
         </div>
-      </button>
 
-      {/* dropdown content */}
-      <div
-        className={`${
-          isOpen
-            ? "block w-[200px] md:w-full absolute top-[calc(100%+8px)] right-0 bg-[#2a3268] rounded "
-            : "hidden"
-        }`}
-      >
+        {/* end:Profile Dropdown Arrow */}
+      </button>
+      {/* end:Profile Dropdown Trigger */}
+
+      {/* start::Profile Dropdown Content */}
+      <div className={`${isOpen ? "xc-profile-dropdown-container" : "hidden"}`}>
         <ul className="py-2 flex flex-col">
           {dropdownItems.map((item, index) => (
             <Link key={index} to={item.href}>
@@ -58,6 +60,7 @@ const ProfileDropdown = () => {
           ))}
         </ul>
       </div>
+      {/* end::Dropdown Content */}
     </div>
   );
 };

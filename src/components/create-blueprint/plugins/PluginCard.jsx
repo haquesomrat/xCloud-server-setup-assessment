@@ -1,34 +1,41 @@
 import pluginImg from "/icons/plugin-icon.png";
 
-const Plugin = ({ plugin, handlePluginSelection }) => {
+const PluginCard = ({ plugin, handlePluginSelection }) => {
   const { selected, id } = plugin;
+
   return (
     <div
       onClick={() => handlePluginSelection(id)}
-      className={`bg-[#171A30] rounded-lg relative divide-y-[1px] divide-[#1D2239] cursor-pointer border ${
-        selected ? "border-[#147AFF]" : "border-transparent"
+      className={`xc-plugin-card ${
+        selected ? "border-xc-blue" : "border-transparent"
       }`}
     >
+      {/* start:: Plugin Card Details */}
       <div className="flex justify-between gap-4 p-4 pb-6">
+        {/* start:: Plugin Image */}
         <div>
-          <div className=" h-12 w-12 rounded-lg bg-[#1D2239] xc-middle">
+          <div className=" h-12 w-12 rounded-lg bg-xc-foreground xc-middle">
             <img src={pluginImg} alt="plugin image" />
           </div>
         </div>
+        {/* end:: Plugin Image */}
 
+        {/* start::Plugin Text Content */}
         <div>
           <h6 className="text-base text-white font-medium pb-2 leading-none">
             Plugin name
           </h6>
-          <p className="text-xs text-[#74778E] pb-4">
+          <p className="text-xs text-xc-cardText pb-4">
             Have an existing website already? Select this option to Have
           </p>
 
-          <p className="text-xs text-[#74778E] font-medium italic">
+          <p className="text-xs text-xc-cardText font-medium italic">
             By: <span className="text-white">WPDeveloper</span>
           </p>
         </div>
+        {/* end::Plugin Text Content */}
 
+        {/* start:: Plugin Card Selection/Deselection */}
         <div>
           {selected ? (
             <svg
@@ -62,11 +69,16 @@ const Plugin = ({ plugin, handlePluginSelection }) => {
               </defs>
             </svg>
           ) : (
-            <span className="h-4 w-4 xc-middle border border-[#313A6C] absolute top-2 right-2 z-20 rounded-full m-1"></span>
+            <span className="h-4 w-4 xc-middle border border-xc-borderColor absolute top-2 right-2 z-20 rounded-full m-1"></span>
           )}
         </div>
+        {/* end:: Plugin Card Selection/Deselection */}
       </div>
+      {/* end:: Plugin Card Details */}
+
+      {/* start:: Plugin Card Footer */}
       <div className="py-3 px-4">
+        {/* start::Plugin Rating */}
         <div className="flex items-center gap-1 pb-2">
           <div className="flex gap-[2px]">
             {Array(4)
@@ -106,14 +118,17 @@ const Plugin = ({ plugin, handlePluginSelection }) => {
               />
             </svg>
           </div>
-          <span className="text-xs text-[#74778E] leading-none">(12,23)</span>
+          <span className="text-xs text-xc-cardText leading-none">(12,23)</span>
         </div>
-        <p className="text-xs text-[#74778E] leading-none">
+        {/* end::Plugin Rating */}
+
+        <p className="text-xs text-xc-cardText leading-none">
           5M+ Active Installations
         </p>
       </div>
+      {/* end::Plugin Card Content */}
     </div>
   );
 };
 
-export default Plugin;
+export default PluginCard;

@@ -5,6 +5,7 @@ const BlueprintNameInput = ({
 }) => {
   return (
     <div className="flex gap-2 items-center relative">
+      {/* start:: Input Edit Icon  */}
       <svg
         className="absolute left-[29px]"
         width="24"
@@ -35,9 +36,11 @@ const BlueprintNameInput = ({
           </clipPath>
         </defs>
       </svg>
+      {/* end:: Input Edit Icon  */}
 
+      {/* start:: Input */}
       <input
-        className={`bg-transparent w-full focus-visible:outline-0 text-[#919DB9] text-base px-[61px] py-4 border rounded border-[#313A6C] ${
+        className={`xc-create-blueprint-input ${
           errorStatus === "failed" &&
           "border-[#FC573B] placeholder:text-[#FC573B]"
         } ${errorStatus === "success" && "border-[#32BA7C]"} `}
@@ -47,6 +50,7 @@ const BlueprintNameInput = ({
         value={blueprintName}
         onChange={handleNameChange}
       />
+      {/* end:: Input */}
     </div>
   );
 };

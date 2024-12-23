@@ -4,19 +4,19 @@ const ServerDetails = ({ serverName, tag, handleChange }) => {
   return (
     <div>
       <div>
-        <h4 className="text-lg font-medium text-white leading-tight pb-4">
-          Server Details
-        </h4>
+        {/* start::Section Title */}
+        <h4 className="xc-section-title">Server Details</h4>
+        {/* end::Section Title */}
+
+        {/* start::Server Details Content */}
         <div className="grid gap-4 lg:gap-[30px] grid-cols-1 md:grid-cols-2">
+          {/* start::Server Name Input */}
           <div className="grid col-span-1">
-            <label
-              htmlFor="server-name"
-              className="text-[#74778E] text-sm leading-tight pb-2.5"
-            >
+            <label htmlFor="server-name" className="xc-input-label">
               Server Name
             </label>
             <input
-              className="px-4 py-3 md:px-6 md:py-5 bg-transparent rounded-[5px] border text-[#919DB9] text-sm leading-tight border-[#313A6C]  focus-visible:outline-0"
+              className="px-4 py-3 md:px-6 md:py-5 bg-transparent rounded-[5px] border text-xc-text text-sm leading-tight border-xc-borderColor  focus-visible:outline-0"
               type="text"
               name="serverName"
               placeholder="Example Site"
@@ -25,16 +25,17 @@ const ServerDetails = ({ serverName, tag, handleChange }) => {
               onChange={handleChange}
             />
           </div>
+          {/* end::Server Name Input */}
+
+          {/* start::Add Tag Select */}
           <div className="grid col-span-1 relative">
-            <label
-              htmlFor="add-tag"
-              className="text-[#74778E] text-sm leading-tight pb-2.5"
-            >
+            <label htmlFor="add-tag" className="xc-input-label">
               Add Tag (Optional)
             </label>
+
             <div className="relative">
               <select
-                className="w-full px-4 py-2.5 md:px-[25px] md:py-[21px] bg-transparent cursor-pointer rounded-[5px] border text-[#919DB9] text-sm leading-tight border-[#313A6C] appearance-none focus-visible:outline-0"
+                className="xc-select"
                 name="tag"
                 id="tags"
                 value={tag}
@@ -49,7 +50,9 @@ const ServerDetails = ({ serverName, tag, handleChange }) => {
                   </option>
                 ))}
               </select>
-              <span className="absolute top-1/2 right-4 transform -translate-y-1/2 pointer-events-none h-5 w-5 rounded flex items-center justify-center bg-[#313A6C]">
+
+              {/* start::Custom Select Arrow */}
+              <span className="absolute top-1/2 right-4 transform -translate-y-1/2 pointer-events-none xc-select-arrow">
                 <svg
                   width="10"
                   height="6"
@@ -63,9 +66,12 @@ const ServerDetails = ({ serverName, tag, handleChange }) => {
                   />
                 </svg>
               </span>
+              {/* end::Custom Select Arrow */}
             </div>
           </div>
+          {/* end::Add Tag Select */}
         </div>
+        {/* end::Server Details Content */}
       </div>
     </div>
   );

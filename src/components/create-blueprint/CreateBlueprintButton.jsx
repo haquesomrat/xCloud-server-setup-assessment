@@ -3,9 +3,9 @@ const CreateBlueprintButton = ({ handleShowModal }) => {
     <button
       type="button"
       onClick={handleShowModal}
-      className="flex items-center p-3 gap-1 bg-[#147AFF] rounded text-white text-sm m-2"
+      className="flex items-center p-3 gap-1 bg-xc-blue rounded text-white text-sm m-2"
     >
-      {/* plus icon */}
+      {/* start:: Plus Icon */}
       <svg
         width="18"
         height="18"
@@ -35,6 +35,7 @@ const CreateBlueprintButton = ({ handleShowModal }) => {
           </clipPath>
         </defs>
       </svg>
+      {/* end:: Plus Icon */}
 
       <span>Create New Blueprint</span>
     </button>

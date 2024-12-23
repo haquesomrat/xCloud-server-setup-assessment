@@ -12,7 +12,7 @@ const SelectedPlugins = () => {
           <p className="text-2xl font-semibold">{plugin.fallbackIcon}</p>
 
           {/* selected tick */}
-          <span className="w-4 h-4 flex items-center justify-center border border-[#1D2239] bg-[#2DC774] rounded-full absolute -top-[3px] -right-[3px] group-hover:hidden">
+          <span className="w-4 h-4 flex items-center justify-center border border-xc-foreground bg-[#2DC774] rounded-full absolute -top-[3px] -right-[3px] group-hover:hidden">
             <svg
               width="10"
               height="8"
@@ -31,7 +31,7 @@ const SelectedPlugins = () => {
           </span>
 
           {/* removal icon */}
-          <span className="w-4 h-4 hidden group-hover:flex items-center justify-center border border-[#1D2239] bg-white rounded-full absolute -top-[3px] -right-[3px] ">
+          <span className="w-4 h-4 hidden group-hover:flex items-center justify-center border border-xc-foreground bg-white rounded-full absolute -top-[3px] -right-[3px] ">
             <svg
               width="12"
               height="12"

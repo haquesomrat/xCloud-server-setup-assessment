@@ -11,14 +11,15 @@ const BlueprintSelection = ({
   handleChange,
 }) => {
   return (
-    <div className="p-5 bg-[#171A30] rounded-[5px]">
-      {/* Blueprint checkbox */}
+    <div className="p-5 bg-xc-background rounded-[5px]">
+      {/* start::Blueprint Checkbox */}
       <BlueprintCheckbox
         isBlueprintsChecked={isBlueprintsChecked}
         handleCheckboxChange={handleCheckboxChange}
       />
+      {/* end::Blueprint Checkbox */}
 
-      {/* Blueprint options */}
+      {/* start::Blueprint Options */}
       {isBlueprintsChecked && (
         <BlueprintOptions
           blueprint={blueprint}
@@ -26,14 +27,16 @@ const BlueprintSelection = ({
           allBlueprints={allBlueprints.slice(0, 3)}
         />
       )}
+      {/* end::Blueprint Options */}
 
-      {/* View all button and create blueprint button with modal */}
+      {/* start::Blueprint Button Container */}
       {isBlueprintsChecked && (
-        <div className="flex flex-wrap gap-3 sm:gap-5 items-center justify-center md:justify-end pt-4">
+        <div className="xc-blueprint-btn-container">
           <div>
+            {/* start::View All Button */}
             <Link to="/blueprints">
               <button className="flex items-center p-3 gap-1 group">
-                <span className="text-sm text-[#147AFF]">View All</span>
+                <span className="text-sm text-xc-blue">View All</span>
                 <svg
                   className="group-hover:translate-x-1 duration-200"
                   width="16"
@@ -73,12 +76,16 @@ const BlueprintSelection = ({
                 </svg>
               </button>
             </Link>
+            {/* end::View All Button */}
           </div>
           <div>
+            {/* start::Create Blueprint Modal */}
             <CreateBlueprintModal />
+            {/* end::Create Blueprint Modal */}
           </div>
         </div>
       )}
+      {/* end::Blueprint Button Container */}
     </div>
   );
 };

@@ -12,18 +12,22 @@ const CreateBlueprintModal = () => {
   const [errorStatus, setErrorStatus] = useState("");
   const [isWarningOpen, setIsWarningOpen] = useState(false);
 
+  // handle blueprint name change
   const handleNameChange = (e) => {
     setBlueprintName(e.target.value);
   };
 
+  // handle modal
   const handleShowModal = () => {
     setShowModal(!showModal);
   };
 
+  // handle blueprint name submit
   const handleBlueprintNameSubmit = () => {
     if (blueprintName.length > 0) {
       setErrorStatus("success");
       setShowModal(false);
+      setIsWarningOpen(false);
     } else {
       setErrorStatus("failed");
       setShowModal(true);
@@ -31,14 +35,16 @@ const CreateBlueprintModal = () => {
     }
   };
 
+  // handle click outside
   useClickOutside(modalRef, () => setShowModal(false));
 
   return (
     <div>
-      {/* modal trigger button */}
+      {/* start::Modal Trigger */}
       <CreateBlueprintButton handleShowModal={handleShowModal} />
+      {/* end::Modal Trigger */}
 
-      {/* modal content */}
+      {/* start::Modal Content */}
       {showModal && (
         <CreateBlueprintContent
           modalRef={modalRef}
@@ -51,6 +57,7 @@ const CreateBlueprintModal = () => {
           setIsWarningOpen={setIsWarningOpen}
         />
       )}
+      {/* end::Modal Content */}
     </div>
   );
 };

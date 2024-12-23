@@ -4,13 +4,15 @@ import SelectedPlugins from "./SelectedPlugins";
 const Plugins = () => {
   return (
     <div className="pb-0">
-      {/* selected plugins */}
+      {/* start::Selected Plugins */}
       <SelectedPlugins />
+      {/* end::Selected Plugins */}
 
-      {/* all plugins */}
-      <div className="">
+      {/* strat::All Plugins */}
+      <div>
         <AllPlugins />
       </div>
+      {/* end::All Plugins */}
     </div>
   );
 };

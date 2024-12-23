@@ -4,14 +4,18 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="bg-[#1D2239]">
-      <div className="max-w-[2075px] mx-auto flex justify-between items-center p-4 md:py-[25px] xl:px-[50px]">
+    <div className="bg-xc-foreground">
+      <div className="max-w-2xl mx-auto xc-between p-4 md:py-[25px] xl:px-[50px]">
+        {/* start:: Logo */}
         <Link to="/">
           <img src={xCloudLogo} alt="Logo" />
         </Link>
+        {/* end:: Logo */}
+
+        {/* start:: Notification & Profile Dropdown Content */}
         <div className="text-white inline-flex items-center gap-4 relative">
           <div>
-            {/* notification icon */}
+            {/* start::Notification Icon */}
             <svg
               width="24"
               height="24"
@@ -31,11 +35,18 @@ const Navbar = () => {
                 </clipPath>
               </defs>
             </svg>
-            {/* active status */}
+            {/* end::Notification Icon */}
+
+            {/* start:: Notification Active Status */}
             <div className="h-[7px] w-[7px] bg-[#2DC774] rounded-full absolute top-2.5 left-5"></div>
+            {/* end:: Notification Active Status */}
           </div>
+
+          {/* start:: Profile Dropdown */}
           <ProfileDropdown />
+          {/* end:: Profile Dropdown */}
         </div>
+        {/* end:: Notification & Profile Dropdown Content */}
       </div>
     </div>
   );

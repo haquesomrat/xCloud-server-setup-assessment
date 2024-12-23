@@ -6,7 +6,9 @@ const Root = () => {
   const { showModal } = useModal();
 
   return (
-    <div className={`bg-[#171A30] ${showModal && " h-screen overflow-hidden"}`}>
+    <div
+      className={`bg-xc-background ${showModal && " h-screen overflow-hidden"}`}
+    >
       <Navbar />
       <div>
         <Outlet />

@@ -6,12 +6,18 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      backgroundColor: "#171A30",
-      foregroundColor: "#1D2239",
-      fontColor: "#919DB9",
-      cardFontColor: "#74778E",
-      borderColor: "#313A6C",
-      xcBlue: "#147AFF",
+      colors: {
+        "xc-background": "#171A30",
+        "xc-foreground": "#1D2239",
+        "xc-text": "#919DB9",
+        "xc-cardText": "#74778E",
+        "xc-borderColor": "#313A6C",
+        "xc-blue": "#147AFF",
+      },
+      maxWidth: {
+        lg: "1050px",
+        "2xl": "2075px",
+      },
     },
   },
   plugins: [scrollbarHide],

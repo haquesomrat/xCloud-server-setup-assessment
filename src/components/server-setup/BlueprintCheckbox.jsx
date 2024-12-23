@@ -2,7 +2,11 @@ const BlueprintCheckbox = ({ isBlueprintsChecked, handleCheckboxChange }) => {
   return (
     <div className={`${isBlueprintsChecked && "pb-3"}`}>
       <div className="flex justify-between gap-4">
+        {/* start::Section Title */}
         <h6 className="text-2xl text-white leading-tight pb-3">Blueprints</h6>
+        {/* end::Section Title */}
+
+        {/* start::Blueprint Toggler */}
         <div>
           <label className="flex cursor-pointer select-none items-center">
             <div className="relative">
@@ -13,12 +17,12 @@ const BlueprintCheckbox = ({ isBlueprintsChecked, handleCheckboxChange }) => {
                 className="sr-only"
               />
               <div
-                className={`box block h-6 w-[42px] rounded-full ${
+                className={`box xc-toggle-container ${
                   isBlueprintsChecked ? "bg-[#32BA7C]" : "bg-[#EEF2F7]"
                 }`}
               ></div>
               <div
-                className={`absolute left-1 top-1 flex h-4 w-4 items-center justify-center rounded-full  transition ${
+                className={`xc-toggle-button ${
                   isBlueprintsChecked
                     ? "translate-x-full bg-white"
                     : "bg-[#9DA2AE]"
@@ -27,10 +31,14 @@ const BlueprintCheckbox = ({ isBlueprintsChecked, handleCheckboxChange }) => {
             </div>
           </label>
         </div>
+        {/* end::Blueprint Toggler */}
       </div>
-      <p className="text-sm text-[#919DB9] leading-relaxed">
+
+      {/* start::Blueprint Description */}
+      <p className="text-sm text-xc-text leading-relaxed">
         Add the following record to the DNS for your domain to get free
       </p>
+      {/* end::Blueprint Description */}
     </div>
   );
 };
