@@ -4,7 +4,6 @@ import Plugin from "./Plugin";
 
 const AllPlugins = () => {
   const [plugins, setPlugins] = useState(allPlugins.slice(0, 12));
-  console.log(plugins);
 
   const handlePluginSelection = (id) => {
     setPlugins((prevPlugins) => {

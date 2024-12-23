@@ -2,11 +2,12 @@ import { useRef, useState } from "react";
 import CreateBlueprintButton from "./CreateBlueprintButton";
 import CreateBlueprintContent from "./CreateBlueprintContent";
 import useClickOutside from "../../hooks/useClickOutside";
+import { useModal } from "../Context/ModalProvider";
 
 const CreateBlueprintModal = () => {
   const modalRef = useRef(null);
 
-  const [showModal, setShowModal] = useState(false);
+  const { showModal, setShowModal } = useModal();
   const [blueprintName, setBlueprintName] = useState("");
   const [errorStatus, setErrorStatus] = useState("");
   const [isWarningOpen, setIsWarningOpen] = useState(false);

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Blueprints from "./pages/Blueprints";
 import Root from "./layout/Root";
 import { FormProvider } from "./components/Context/FormProvider";
+import { ModalProvider } from "./components/Context/ModalProvider";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <FormProvider>
-      <RouterProvider router={router} />
+      <ModalProvider>
+        <RouterProvider router={router} />
+      </ModalProvider>
     </FormProvider>
   </StrictMode>
 );

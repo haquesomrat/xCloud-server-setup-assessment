@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
-// import { useContext } from "react";
+import { useModal } from "../components/Context/ModalProvider";
 
 const Root = () => {
-  // const blueprintsContext = useContext(null);
+  const { showModal } = useModal();
 
   return (
-    <div className="bg-[#171A30]">
+    <div className={`bg-[#171A30] ${showModal && " h-screen overflow-hidden"}`}>
       <Navbar />
       <div>
         <Outlet />
