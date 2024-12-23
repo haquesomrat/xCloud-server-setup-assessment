@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ServerTypes from "./ServerTypes.jsx";
 import ServerDetails from "./ServerDetails.jsx";
-import BlueprintSelection from "./BlueprintSelection.jsx";
-import { useForm } from "../Context/FormProvider.jsx";
+import { useForm } from "../../Context/FormProvider.jsx";
+import BlueprintSelection from "./blueprints/BlueprintSelection.jsx";
 
 const ServerSetupForm = () => {
   const { formData, setFormData } = useForm();

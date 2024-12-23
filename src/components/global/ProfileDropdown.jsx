@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import profileAvatar from "/profile-avatar.png";
 import { useRef, useState } from "react";
-import { dropdownItems } from "../fake-data/dropdownItems";
-import useClickOutside from "../hooks/useClickOutside";
+import { dropdownItems } from "../../fake-data/dropdownItems";
+import useClickOutside from "../../hooks/useClickOutside";
 
 const ProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);

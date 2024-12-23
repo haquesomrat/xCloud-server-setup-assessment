@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import CreateBlueprintButton from "./CreateBlueprintButton";
 import CreateBlueprintContent from "./CreateBlueprintContent";
-import useClickOutside from "../../hooks/useClickOutside";
-import { useModal } from "../Context/ModalProvider";
+import useClickOutside from "../../../hooks/useClickOutside";
+import { useModal } from "../../../Context/ModalProvider";
 
 const CreateBlueprintModal = () => {
   const modalRef = useRef(null);

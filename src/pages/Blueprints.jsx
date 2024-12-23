@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import Container from "../components/Container";
-import CreateBlueprintModal from "../components/create-blueprint/CreateBlueprintModal";
-import BlueprintOptions from "../components/server-setup/BlueprintOptions";
 import { allBlueprints } from "../fake-data/allBlueprints";
-import { useForm } from "../components/Context/FormProvider";
+import { useForm } from "../Context/FormProvider";
+import Container from "../components/global/Container";
+import CreateBlueprintModal from "../components/global/create-blueprint-modal/CreateBlueprintModal";
+import BlueprintOptions from "../components/server-setup/blueprints/BlueprintOptions";
 
 const Blueprints = () => {
   const { formData, setFormData } = useForm();

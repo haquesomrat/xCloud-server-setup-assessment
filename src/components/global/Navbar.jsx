@@ -1,5 +1,5 @@
-import xCloudLogo from "/xCloudLogo.png";
 import ProfileDropdown from "./ProfileDropdown";
+import xCloudLogo from "/xCloudLogo.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

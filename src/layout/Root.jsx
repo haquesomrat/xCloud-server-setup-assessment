@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import { useModal } from "../components/Context/ModalProvider";
+import Navbar from "../components/global/Navbar";
+import { useModal } from "../Context/ModalProvider";
 
 const Root = () => {
   const { showModal } = useModal();

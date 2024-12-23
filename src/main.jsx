@@ -5,8 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Blueprints from "./pages/Blueprints";
 import Root from "./layout/Root";
-import { FormProvider } from "./components/Context/FormProvider";
-import { ModalProvider } from "./components/Context/ModalProvider";
+import { FormProvider } from "./Context/FormProvider";
+import { ModalProvider } from "./Context/ModalProvider";
 
 const router = createBrowserRouter([
   {

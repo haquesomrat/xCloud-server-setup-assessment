@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import CreateBlueprintModal from "../create-blueprint/CreateBlueprintModal";
-import BlueprintOptions from "./BlueprintOptions";
 import BlueprintCheckbox from "./BlueprintCheckbox";
-import { allBlueprints } from "../../fake-data/allBlueprints";
+import { allBlueprints } from "../../../fake-data/allBlueprints";
+import BlueprintOptions from "./BlueprintOptions";
+import CreateBlueprintModal from "../../global/create-blueprint-modal/CreateBlueprintModal";
 
 const BlueprintSelection = ({
   isBlueprintsChecked,

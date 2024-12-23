@@ -55,4 +55,4 @@ npm run build
 npm run preview
 ```
 
-7. Access the live version at https://xcloud-server-setup-inj.netlify.app.
+## **Access the live version at https://xcloud-server-setup-inj.netlify.app.**

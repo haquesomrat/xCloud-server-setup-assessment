@@ -1,5 +1,5 @@
-import BlueprintNameInput from "./BlueprintNameInput";
-import CreateBlueprintTab from "./CreateBlueprintTab";
+import BlueprintNameInput from "../../create-blueprint/BlueprintNameInput";
+import CreateBlueprintTab from "../../create-blueprint/CreateBlueprintTab";
 import ModalFooter from "./ModalFooter";
 import ModalWarning from "./ModalWarning";
 

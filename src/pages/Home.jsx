@@ -1,5 +1,5 @@
-import Container from "../components/Container";
-import Footer from "../components/Footer";
+import Container from "../components/global/Container";
+import Footer from "../components/global/Footer";
 import ServerSetupContainer from "../components/server-setup/ServerSetupContainer";
 
 const Home = () => {
