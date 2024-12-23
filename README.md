@@ -1,8 +1,3 @@
-Here’s a modified version of your README.md with improvements and consistent formatting:
-
-markdown
-Copy code
-
 # xCloud Server Setup Assessment
 
 XCloud Server Setup is a web application that allows users to configure and select their server credentials seamlessly.
