@@ -6,8 +6,12 @@ const tabsData = [
   {
     id: "1",
     label: "Themes",
-    content:
-      "Content 1 is themes. But this is not a real content.It is just a placeholder.",
+    content: (
+      <p className="pb-20 text-white">
+        This is themes content. But this is not a real content. It is just a
+        placeholder.
+      </p>
+    ),
   },
   {
     id: "2",
@@ -17,7 +21,12 @@ const tabsData = [
   {
     id: "3",
     label: "Popular Plugins",
-    content: <Plugins />,
+    content: (
+      <p className="pb-20 text-white">
+        This is popular plugin content. But this is not a real content. It is
+        just a placeholder.
+      </p>
+    ),
   },
 ];
 

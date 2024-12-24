@@ -13,7 +13,7 @@ const Navbar = () => {
         {/* end:: Logo */}
 
         {/* start:: Notification & Profile Dropdown Content */}
-        <div className="text-white inline-flex items-center gap-4 relative">
+        <div className="text-white inline-flex items-center gap-4 relative cursor-pointer">
           <div>
             {/* start::Notification Icon */}
             <svg

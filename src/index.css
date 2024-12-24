@@ -90,7 +90,7 @@ input:-webkit-autofill:active {
   }
 
   .xc-create-blueprint-content {
-    @apply bg-xc-background fixed inset-0 flex flex-col items-center justify-center z-40 overflow-hidden;
+    @apply bg-[#171A30CC] fixed inset-0 flex flex-col items-center justify-center z-40 overflow-hidden;
   }
 
   .xc-modal-content {
@@ -106,7 +106,7 @@ input:-webkit-autofill:active {
   }
 
   .xc-plugin-container {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[510px] overflow-auto scrollbar-hide mt-6 pb-[60px];
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[400px] 2xl:max-h-[500px] overflow-auto scrollbar-hide mt-6 pb-[60px];
   }
 
   .xc-plugin-card {
