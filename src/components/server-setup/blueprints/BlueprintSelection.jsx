@@ -11,7 +11,7 @@ const BlueprintSelection = ({
   handleChange,
 }) => {
   return (
-    <div className="p-5 bg-xc-background rounded-[5px]">
+    <div className="p-4 md:p-6 bg-xc-background rounded-[5px]">
       {/* start::Blueprint Checkbox */}
       <BlueprintCheckbox
         isBlueprintsChecked={isBlueprintsChecked}
