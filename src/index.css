@@ -57,6 +57,22 @@ input:-webkit-autofill:active {
     @apply h-4 w-4 flex items-center justify-center border border-xc-borderColor absolute top-2 right-2 z-20 rounded-full m-[2px];
   }
 
+  .xc-selected-plugin {
+    @apply border border-transparent rounded-lg h-12 w-12 xc-middle relative cursor-pointer hover:-translate-y-[14px] transition-transform duration-300 ease-in-out;
+  }
+
+  .xc-plugin-icon {
+    @apply w-4 h-4 border border-xc-foreground rounded-full absolute -top-[3px] -right-[3px];
+  }
+
+  .xc-plugin-selected-icon {
+    @apply xc-middle bg-[#2DC774];
+  }
+
+  .xc-plugin-deselected-icon {
+    @apply hidden items-center justify-center bg-white;
+  }
+
   .xc-blueprint-card {
     @apply flex items-start gap-[5px] p-[15px] rounded-md border z-10 cursor-pointer;
   }
