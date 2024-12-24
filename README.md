@@ -4,23 +4,6 @@ XCloud Server Setup is a web application that allows users to configure and sele
 
 ---
 
-## **Features**
-
-- **Responsive UI:** Ensures compatibility across devices.
-- **Server Configuration Options:** Interactive form for server credential setup.
-- **Efficient Routing:** Built with React Router DOM for smooth navigation.
-
----
-
-## **Technologies Used**
-
-- **React.js:** A JavaScript library for building user interfaces.
-- **Vite:** A fast development build tool for modern web projects.
-- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
-- **React Router DOM:** For managing client-side routing and navigation.
-
----
-
 ## Getting Started
 
 1. Clone this repository:
@@ -56,3 +39,20 @@ npm run preview
 ```
 
 ## **Access the live version at https://xcloud-server-setup-inj.netlify.app.**
+
+---
+
+## **Features**
+
+- **Responsive UI:** Ensures compatibility across devices.
+- **Server Configuration Options:** Interactive form for server credential setup.
+- **Efficient Routing:** Built with React Router DOM for smooth navigation.
+
+---
+
+## **Technologies Used**
+
+- **React.js:** A JavaScript library for building user interfaces.
+- **Vite:** A fast development build tool for modern web projects.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+- **React Router DOM:** For managing client-side routing and navigation.

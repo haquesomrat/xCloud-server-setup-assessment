@@ -21,7 +21,7 @@ const ServerSetupForm = () => {
     setIsBlueprintsChecked(!isBlueprintsChecked);
   };
 
-  console.log(formData);
+  // console.log(formData);
 
   return (
     <form className="pt-12 space-y-8">
