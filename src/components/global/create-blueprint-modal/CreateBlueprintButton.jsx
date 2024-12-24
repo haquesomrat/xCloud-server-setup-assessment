@@ -3,7 +3,7 @@ const CreateBlueprintButton = ({ handleShowModal }) => {
     <button
       type="button"
       onClick={handleShowModal}
-      className="flex items-center p-3 gap-1 bg-xc-blue rounded text-white text-sm m-2"
+      className="flex items-center p-3 gap-1 bg-xc-blue rounded text-white text-sm"
     >
       {/* start:: Plus Icon */}
       <svg
